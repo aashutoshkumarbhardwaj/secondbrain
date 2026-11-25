@@ -27,6 +27,14 @@
           "note": "Core morning algorithmic sprint",
           "status": "todo",
           "updated_at": "08:54 PM"
+        },
+        {
+          "title": "Nov 26: 20+ Applications & Tracker Audit",
+          "category": "Jobs",
+          "priority": "high",
+          "note": "Full-stack & AI/ML role blitz at 3:30 PM",
+          "status": "todo",
+          "updated_at": "08:54 PM"
         }
       ],
       "notes": [
@@ -45,6 +53,10 @@
         {
           "time": "08:54 PM",
           "text": "Planned [DSA \u00b7 Important]: Nov 26: 1 LeetCode + 1 Codeforces + 1 CodeChef \u2014 Core morning algorithmic sprint"
+        },
+        {
+          "time": "08:54 PM",
+          "text": "Planned [Jobs \u00b7 Important]: Nov 26: 20+ Applications & Tracker Audit \u2014 Full-stack & AI/ML role blitz at 3:30 PM"
         }
       ]
     }
