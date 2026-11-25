@@ -1,6 +1,6 @@
 {
   "latest_date": "2026-11-25",
-  "updated_at": "Nov 25, 08:54 PM IST",
+  "updated_at": "Nov 25, 08:57 PM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -51,6 +51,14 @@
           "note": "Physical maintenance and consistency",
           "status": "todo",
           "updated_at": "08:54 PM"
+        },
+        {
+          "title": "Life Audit & Habit Tracking",
+          "category": "Routine",
+          "priority": "high",
+          "note": "Continuous tracking of sleep, discipline, consistency, and self-improvement metrics.",
+          "status": "todo",
+          "updated_at": "08:57 PM"
         }
       ],
       "notes": [
@@ -81,6 +89,10 @@
         {
           "time": "08:54 PM",
           "text": "Planned [Routine \u00b7 Important]: Nov 26: Push Workout, Minoxidil & Grooming \u2014 Physical maintenance and consistency"
+        },
+        {
+          "time": "08:57 PM",
+          "text": "Planned [Routine \u00b7 Important]: Life Audit & Habit Tracking \u2014 Continuous tracking of sleep, discipline, consistency, and self-improvement metrics."
         }
       ]
     }
