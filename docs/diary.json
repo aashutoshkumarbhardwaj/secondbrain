@@ -35,6 +35,14 @@
           "note": "Full-stack & AI/ML role blitz at 3:30 PM",
           "status": "todo",
           "updated_at": "08:54 PM"
+        },
+        {
+          "title": "Nov 26: Shayari & Tech X/Twitter Posts",
+          "category": "Content",
+          "priority": "low",
+          "note": "Evening content & social update at 9:00 PM",
+          "status": "todo",
+          "updated_at": "08:54 PM"
         }
       ],
       "notes": [
@@ -57,6 +65,10 @@
         {
           "time": "08:54 PM",
           "text": "Planned [Jobs \u00b7 Important]: Nov 26: 20+ Applications & Tracker Audit \u2014 Full-stack & AI/ML role blitz at 3:30 PM"
+        },
+        {
+          "time": "08:54 PM",
+          "text": "Planned [Content \u00b7 Less Important]: Nov 26: Shayari & Tech X/Twitter Posts \u2014 Evening content & social update at 9:00 PM"
         }
       ]
     }
