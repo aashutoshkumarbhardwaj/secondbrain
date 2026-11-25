@@ -3,197 +3,221 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>F.R.I.D.A.Y. // Cognitive & Streak Telemetry</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  <title>Digital Diary — Daily Plan & Live Updates</title>
   <style>
     :root {
-      --bg: #040812;
-      --panel: rgba(11, 20, 38, 0.78);
-      --border: rgba(0, 229, 255, 0.22);
-      --cyan: #00e5ff;
-      --amber: #ffb300;
-      --green: #00e676;
-      --red: #ff5252;
-      --text: #e2f1f8;
-      --muted: #7b9bb2;
+      --bg: #f5f5f7;
+      --card: rgba(255, 255, 255, 0.88);
+      --border: rgba(0, 0, 0, 0.08);
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --blue: #0071e3;
+      --green: #28cd41;
+      --orange: #ff9500;
+      --pill: rgba(0, 0, 0, 0.05);
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: rgba(28, 28, 30, 0.85);
+        --border: rgba(255, 255, 255, 0.1);
+        --text: #f5f5f7;
+        --muted: #98989d;
+        --blue: #0a84ff;
+        --green: #30d158;
+        --orange: #ff9f0a;
+        --pill: rgba(255, 255, 255, 0.08);
+        --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+      }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: radial-gradient(circle at 20% 10%, #0a1930 0%, var(--bg) 60%);
+      background: var(--bg);
       color: var(--text);
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      padding: 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 28px 18px 64px;
+      line-height: 1.45;
     }
-    .container { max-width: 1180px; margin: 0 auto; }
+    .wrap { max-width: 1020px; margin: 0 auto; }
     header {
-      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-      background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
-      padding: 16px 22px; margin-bottom: 18px; backdrop-filter: blur(12px);
-      box-shadow: 0 0 30px rgba(0, 229, 255, 0.08);
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end;
+      gap: 12px; margin-bottom: 24px;
     }
-    .title { font-family: 'JetBrains Mono', monospace; font-size: 1.15rem; font-weight: 700; color: var(--cyan); letter-spacing: 1.5px; }
-    .subtitle { font-size: 0.78rem; color: var(--muted); margin-top: 3px; font-family: 'JetBrains Mono', monospace; }
-    .badge {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; padding: 6px 12px;
-      border-radius: 999px; border: 1px solid rgba(0, 230, 118, 0.4); color: var(--green);
-      background: rgba(0, 230, 118, 0.08);
+    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; }
+    .sub { font-size: 0.92rem; color: var(--muted); margin-top: 2px; }
+    .controls { display: flex; gap: 10px; align-items: center; }
+    input[type="date"] {
+      background: var(--card); color: var(--text); border: 1px solid var(--border);
+      border-radius: 12px; padding: 8px 14px; font-size: 0.85rem; font-weight: 600;
+      font-family: inherit; outline: none;
     }
-    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 18px; }
+    .sync-pill {
+      font-size: 0.78rem; font-weight: 500; color: var(--muted);
+      background: var(--card); border: 1px solid var(--border);
+      padding: 8px 14px; border-radius: 999px;
+    }
+    .summary-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 22px;
+    }
+    @media (max-width: 680px) { .summary-grid { grid-template-columns: 1fr; } }
     .card {
-      background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
-      padding: 18px; backdrop-filter: blur(10px); position: relative; overflow: hidden;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 20px; box-shadow: var(--shadow);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     }
-    .card::before {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    .stat-label { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+    .stat-num { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.03em; margin-top: 4px; }
+    .columns {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 26px;
     }
-    .kpi-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
-    .kpi-val { font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 700; margin: 6px 0 4px; }
-    .kpi-sub { font-size: 0.78rem; color: var(--muted); }
-    .c-cyan { color: var(--cyan); } .c-amber { color: var(--amber); } .c-green { color: var(--green); } .c-red { color: var(--red); }
-    .charts-row { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 18px; }
-    @media (max-width: 860px) { .charts-row { grid-template-columns: 1fr; } }
-    .panel-title {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--cyan);
-      letter-spacing: 1px; margin-bottom: 12px; display: flex; justify-content: space-between;
+    @media (max-width: 860px) { .columns { grid-template-columns: 1fr; } }
+    .col-head {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.9rem; font-weight: 700; margin-bottom: 14px;
     }
-    .chart-box { width: 100%; height: 290px; }
-    .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 18px; }
-    .pillar-item { background: rgba(7, 14, 28, 0.85); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 12px; }
-    .bar-bg { height: 6px; background: #102038; border-radius: 99px; margin-top: 8px; overflow: hidden; }
-    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--amber)); border-radius: 99px; }
-    .heatmap-wrap { overflow-x: auto; padding-bottom: 6px; }
-    .heatmap { display: grid; grid-template-columns: repeat(16, minmax(14px, 1fr)); gap: 5px; }
-    .cell { aspect-ratio: 1; border-radius: 4px; background: #0e1c33; transition: transform 0.15s; }
-    .cell:hover { transform: scale(1.2); outline: 1px solid var(--cyan); }
+    .badge {
+      font-size: 0.75rem; font-weight: 600; padding: 2px 9px; border-radius: 999px;
+      background: var(--pill); color: var(--muted);
+    }
+    .task-list { display: flex; flex-direction: column; gap: 10px; }
+    .task {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: 14px; padding: 13px 15px;
+    }
+    .task-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .task-title { font-size: 0.93rem; font-weight: 600; }
+    .task-title.done-text { text-decoration: line-through; color: var(--muted); }
+    .task-note { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+    .task-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 8px; font-size: 0.74rem; color: var(--muted);
+    }
+    .cat { background: var(--pill); padding: 2px 8px; border-radius: 999px; font-weight: 600; color: var(--text); }
+    .diary-section h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
+    .timeline { display: flex; flex-direction: column; gap: 10px; }
+    .entry {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 14px 18px; box-shadow: var(--shadow);
+    }
+    .entry-time { font-size: 0.78rem; font-weight: 600; color: var(--blue); min-width: 72px; padding-top: 2px; }
+    .entry-body { font-size: 0.92rem; }
+    .empty { color: var(--muted); font-size: 0.86rem; padding: 18px 0; text-align: center; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
     <header>
       <div>
-        <div class="title">F.R.I.D.A.Y. // COGNITIVE &amp; EXECUTION MATRIX</div>
-        <div class="subtitle" id="lastSync">SYNCING TELEMETRY STREAM...</div>
+        <h1>Digital Diary</h1>
+        <div class="sub" id="dateHeading">Today's Plan, Active Focus &amp; Completed Work</div>
       </div>
-      <div class="badge" id="statusBadge">● MATRIX ONLINE</div>
+      <div class="controls">
+        <input type="date" id="datePicker" />
+        <div class="sync-pill" id="syncTime">Waiting for first entry</div>
+      </div>
     </header>
 
-    <div class="kpi-grid">
+    <div class="summary-grid">
       <div class="card">
-        <div class="kpi-label">Completed Today</div>
-        <div class="kpi-val c-green" id="doneToday">0</div>
-        <div class="kpi-sub" id="doneDelta">Tasks executed today</div>
+        <div class="stat-label">Need To Do</div>
+        <div class="stat-num" style="color: var(--orange);" id="todoCount">0</div>
       </div>
       <div class="card">
-        <div class="kpi-label">Pending / Missed</div>
-        <div class="kpi-val c-red" id="leftToday">0</div>
-        <div class="kpi-sub">Remaining before 11:59 PM</div>
+        <div class="stat-label">Doing Right Now</div>
+        <div class="stat-num" style="color: var(--blue);" id="doingCount">0</div>
       </div>
       <div class="card">
-        <div class="kpi-label">Current Streak</div>
-        <div class="kpi-val c-amber" id="streakVal">0d</div>
-        <div class="kpi-sub" id="bestStreak">Best streak: 0d</div>
-      </div>
-      <div class="card">
-        <div class="kpi-label">Momentum Index</div>
-        <div class="kpi-val c-cyan" id="momentumVal">0%</div>
-        <div class="kpi-sub" id="momentumDelta">7-day vs prior 7-day</div>
+        <div class="stat-label">Completed</div>
+        <div class="stat-num" style="color: var(--green);" id="doneCount">0</div>
       </div>
     </div>
 
-    <div class="charts-row">
+    <div class="columns">
       <div class="card">
-        <div class="panel-title"><span>14-DAY UP / DOWN EXECUTION CURVE</span><span>DONE VS PENDING</span></div>
-        <div id="trendChart" class="chart-box"></div>
+        <div class="col-head"><span>Need To Do</span><span class="badge" id="todoBadge">0</span></div>
+        <div class="task-list" id="todoList"></div>
       </div>
       <div class="card">
-        <div class="panel-title"><span>TODAY'S EFFICIENCY</span><span>TARGET 100%</span></div>
-        <div id="gaugeChart" class="chart-box"></div>
+        <div class="col-head"><span>Doing Now</span><span class="badge" id="doingBadge">0</span></div>
+        <div class="task-list" id="doingList"></div>
+      </div>
+      <div class="card">
+        <div class="col-head"><span>Did Today</span><span class="badge" id="doneBadge">0</span></div>
+        <div class="task-list" id="doneList"></div>
       </div>
     </div>
 
-    <div class="card" style="margin-bottom: 18px;">
-      <div class="panel-title"><span>LIFE PILLARS TELEMETRY (7-DAY CONSISTENCY)</span><span>7D SCORE</span></div>
-      <div class="pillars" id="pillarsGrid"></div>
-    </div>
-
-    <div class="card">
-      <div class="panel-title"><span>16-WEEK CONSISTENCY HEATMAP (112 DAYS)</span><span>LOW → PEAK</span></div>
-      <div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div>
+    <div class="diary-section">
+      <h2>Live Diary Stream</h2>
+      <div class="timeline" id="diaryStream"></div>
     </div>
   </div>
 
   <script>
-    fetch('stats.json?t=' + Date.now())
+    let diaryData = { days: {} };
+
+    function renderDay(selectedDate) {
+      const day = (diaryData.days && diaryData.days[selectedDate]) || { tasks: [], notes: [] };
+      const tasks = day.tasks || [];
+      const notes = day.notes || [];
+
+      const todo = tasks.filter(t => t.status === 'todo');
+      const doing = tasks.filter(t => t.status === 'doing');
+      const done = tasks.filter(t => t.status === 'done');
+
+      document.getElementById('todoCount').textContent = todo.length;
+      document.getElementById('doingCount').textContent = doing.length;
+      document.getElementById('doneCount').textContent = done.length;
+      document.getElementById('todoBadge').textContent = todo.length;
+      document.getElementById('doingBadge').textContent = doing.length;
+      document.getElementById('doneBadge').textContent = done.length;
+
+      const renderCards = (items, emptyMsg, isDone = false) => {
+        if (!items.length) return `<div class="empty">${emptyMsg}</div>`;
+        return items.map(t => `
+          <div class="task">
+            <div class="task-top">
+              <div class="task-title ${isDone ? 'done-text' : ''}">${t.title}</div>
+            </div>
+            ${t.note ? `<div class="task-note">${t.note}</div>` : ''}
+            <div class="task-meta">
+              <span class="cat">${t.category || 'General'}</span>
+              <span>${t.updated_at || ''}</span>
+            </div>
+          </div>
+        `).join('');
+      };
+
+      document.getElementById('todoList').innerHTML = renderCards(todo, 'Nothing queued yet.');
+      document.getElementById('doingList').innerHTML = renderCards(doing, 'No active task right now.');
+      document.getElementById('doneList').innerHTML = renderCards(done, 'Nothing completed yet.', true);
+
+      const stream = document.getElementById('diaryStream');
+      if (!notes.length) {
+        stream.innerHTML = `<div class="card empty">No diary updates logged for ${selectedDate}. Message Hermes on Telegram to add your plan or progress.</div>`;
+      } else {
+        stream.innerHTML = [...notes].reverse().map(n => `
+          <div class="entry">
+            <div class="entry-time">${n.time}</div>
+            <div class="entry-body">${n.text}</div>
+          </div>
+        `).join('');
+      }
+    }
+
+    fetch('diary.json?t=' + Date.now())
       .then(r => r.json())
-      .then(d => {
-        document.getElementById('lastSync').textContent = 'LAST SYNC // ' + (d.updated_at || 'LIVE');
-        document.getElementById('doneToday').textContent = d.today_done;
-        document.getElementById('leftToday').textContent = d.today_left;
-        document.getElementById('streakVal').textContent = d.current_streak + 'd';
-        document.getElementById('bestStreak').textContent = 'Best streak: ' + (d.best_streak || d.current_streak) + 'd';
-        document.getElementById('momentumVal').textContent = d.completion_rate + '%';
-        document.getElementById('momentumDelta').textContent = (d.momentum_delta >= 0 ? '+' : '') + d.momentum_delta + '% vs last week';
-
-        const trendChart = echarts.init(document.getElementById('trendChart'));
-        trendChart.setOption({
-          backgroundColor: 'transparent',
-          tooltip: { trigger: 'axis', backgroundColor: '#091426', borderColor: '#00e5ff44', textStyle: { color: '#e2f1f8', fontFamily: 'JetBrains Mono' } },
-          legend: { data: ['Completed', 'Pending/Left'], textStyle: { color: '#7b9bb2' }, top: 0 },
-          grid: { left: 36, right: 16, top: 36, bottom: 26 },
-          xAxis: { type: 'category', data: d.labels, axisLine: { lineStyle: { color: '#1e3554' } }, axisLabel: { color: '#7b9bb2', fontFamily: 'JetBrains Mono', fontSize: 10 } },
-          yAxis: { type: 'value', splitLine: { lineStyle: { color: '#102038' } }, axisLabel: { color: '#7b9bb2', fontFamily: 'JetBrains Mono' } },
-          series: [
-            {
-              name: 'Completed', type: 'line', smooth: true, data: d.done_series,
-              lineStyle: { color: '#00e5ff', width: 3 }, itemStyle: { color: '#00e5ff' },
-              areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{ offset: 0, color: 'rgba(0,229,255,0.35)' }, { offset: 1, color: 'rgba(0,229,255,0.01)' }]) }
-            },
-            {
-              name: 'Pending/Left', type: 'line', smooth: true, data: d.left_series,
-              lineStyle: { color: '#ff5252', width: 2, type: 'dashed' }, itemStyle: { color: '#ff5252' }
-            }
-          ]
-        });
-
-        const gaugeChart = echarts.init(document.getElementById('gaugeChart'));
-        gaugeChart.setOption({
-          series: [{
-            type: 'gauge', startAngle: 200, endAngle: -20, min: 0, max: 100,
-            progress: { show: true, width: 14, itemStyle: { color: '#00e5ff' } },
-            axisLine: { lineStyle: { width: 14, color: [[1, '#102038']] } },
-            pointer: { show: false }, axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false },
-            detail: { valueAnimation: true, fontSize: 28, fontFamily: 'JetBrains Mono', color: '#ffb300', offsetCenter: [0, '5%'], formatter: '{value}%' },
-            data: [{ value: d.completion_rate }]
-          }]
-        });
-
-        const pg = document.getElementById('pillarsGrid');
-        (d.pillars || []).forEach(p => {
-          pg.innerHTML += `
-            <div class="pillar-item">
-              <div style="display:flex;justify-content:space-between;font-size:0.8rem;font-family:'JetBrains Mono',monospace;">
-                <span>${p.name}</span><span class="c-cyan">${p.pct}%</span>
-              </div>
-              <div class="bar-bg"><div class="bar-fill" style="width:${p.pct}%"></div></div>
-            </div>`;
-        });
-
-        const hm = document.getElementById('heatmap');
-        (d.heatmap || []).forEach(item => {
-          const v = typeof item === 'object' ? item.count : item;
-          const dt = typeof item === 'object' ? item.date : '';
-          const cell = document.createElement('div');
-          cell.className = 'cell';
-          cell.title = dt ? `${dt}: ${v} tasks completed` : `${v} tasks`;
-          cell.style.background = v === 0 ? '#0e1c33' : v <= 2 ? '#005662' : v <= 4 ? '#0097a7' : v <= 6 ? '#00e5ff' : '#ffb300';
-          hm.appendChild(cell);
-        });
-
-        window.addEventListener('resize', () => { trendChart.resize(); gaugeChart.resize(); });
+      .then(data => {
+        diaryData = data;
+        const picker = document.getElementById('datePicker');
+        const defaultDate = data.latest_date || new Date().toISOString().slice(0, 10);
+        picker.value = defaultDate;
+        document.getElementById('syncTime').textContent = data.updated_at ? `Updated ${data.updated_at}` : 'Live';
+        picker.onchange = () => renderDay(picker.value);
+        renderDay(defaultDate);
       });
   </script>
 </body>
