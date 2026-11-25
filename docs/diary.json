@@ -1,6 +1,6 @@
 {
   "latest_date": "2026-11-25",
-  "updated_at": "Nov 25, 08:53 PM IST",
+  "updated_at": "Nov 25, 08:54 PM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -19,6 +19,14 @@
           "note": "Testing tool invocation and diary sync",
           "status": "todo",
           "updated_at": "08:53 PM"
+        },
+        {
+          "title": "Nov 26: 1 LeetCode + 1 Codeforces + 1 CodeChef",
+          "category": "DSA",
+          "priority": "high",
+          "note": "Core morning algorithmic sprint",
+          "status": "todo",
+          "updated_at": "08:54 PM"
         }
       ],
       "notes": [
@@ -33,6 +41,10 @@
         {
           "time": "08:53 PM",
           "text": "Planned [Dev \u00b7 Important]: Verify Hermes end-to-end execution \u2014 Testing tool invocation and diary sync"
+        },
+        {
+          "time": "08:54 PM",
+          "text": "Planned [DSA \u00b7 Important]: Nov 26: 1 LeetCode + 1 Codeforces + 1 CodeChef \u2014 Core morning algorithmic sprint"
         }
       ]
     }
