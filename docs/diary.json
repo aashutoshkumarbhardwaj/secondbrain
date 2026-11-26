@@ -197,6 +197,14 @@
           "note": "Consistent daily content creation.",
           "status": "todo",
           "updated_at": "08:08 PM"
+        },
+        {
+          "title": "Nov 27: Morning Reminder (Free DTH / TV Setup)",
+          "category": "Routine",
+          "priority": "high",
+          "note": "Check into finding a free DTH box or setup for the old TV.",
+          "status": "todo",
+          "updated_at": "08:08 PM"
         }
       ],
       "notes": [
@@ -255,6 +263,10 @@
         {
           "time": "08:08 PM",
           "text": "Planned [Content \u00b7 Less Important]: Nov 27: Instagram Reels & Tech X/Twitter Posts \u2014 Consistent daily content creation."
+        },
+        {
+          "time": "08:08 PM",
+          "text": "Planned [Routine \u00b7 Important]: Nov 27: Morning Reminder (Free DTH / TV Setup) \u2014 Check into finding a free DTH box or setup for the old TV."
         }
       ]
     }
