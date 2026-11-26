@@ -189,6 +189,14 @@
           "note": "Full-stack & AI/ML role blitz.",
           "status": "todo",
           "updated_at": "08:08 PM"
+        },
+        {
+          "title": "Nov 27: Instagram Reels & Tech X/Twitter Posts",
+          "category": "Content",
+          "priority": "low",
+          "note": "Consistent daily content creation.",
+          "status": "todo",
+          "updated_at": "08:08 PM"
         }
       ],
       "notes": [
@@ -243,6 +251,10 @@
         {
           "time": "08:08 PM",
           "text": "Planned [Jobs \u00b7 Important]: Nov 27: 20+ Applications & Recruiter Check \u2014 Full-stack & AI/ML role blitz."
+        },
+        {
+          "time": "08:08 PM",
+          "text": "Planned [Content \u00b7 Less Important]: Nov 27: Instagram Reels & Tech X/Twitter Posts \u2014 Consistent daily content creation."
         }
       ]
     }
