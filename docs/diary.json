@@ -125,6 +125,14 @@
           "note": "Evening content & social update",
           "status": "todo",
           "updated_at": "04:36 AM"
+        },
+        {
+          "title": "Nov 26: Push Workout, Minoxidil & Grooming",
+          "category": "Routine",
+          "priority": "high",
+          "note": "Physical maintenance",
+          "status": "todo",
+          "updated_at": "04:36 AM"
         }
       ],
       "notes": [
@@ -143,6 +151,10 @@
         {
           "time": "04:36 AM",
           "text": "Planned [Content \u00b7 Less Important]: Nov 26: Shayari & Tech X/Twitter Posts \u2014 Evening content & social update"
+        },
+        {
+          "time": "04:36 AM",
+          "text": "Planned [Routine \u00b7 Important]: Nov 26: Push Workout, Minoxidil & Grooming \u2014 Physical maintenance"
         }
       ]
     }
