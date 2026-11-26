@@ -117,6 +117,14 @@
           "note": "Full-stack & AI/ML role blitz",
           "status": "todo",
           "updated_at": "04:36 AM"
+        },
+        {
+          "title": "Nov 26: Shayari & Tech X/Twitter Posts",
+          "category": "Content",
+          "priority": "low",
+          "note": "Evening content & social update",
+          "status": "todo",
+          "updated_at": "04:36 AM"
         }
       ],
       "notes": [
@@ -131,6 +139,10 @@
         {
           "time": "04:36 AM",
           "text": "Planned [Jobs \u00b7 Important]: Nov 26: 20+ Applications & Tracker Audit \u2014 Full-stack & AI/ML role blitz"
+        },
+        {
+          "time": "04:36 AM",
+          "text": "Planned [Content \u00b7 Less Important]: Nov 26: Shayari & Tech X/Twitter Posts \u2014 Evening content & social update"
         }
       ]
     }
