@@ -1,6 +1,6 @@
 {
   "latest_date": "2026-11-26",
-  "updated_at": "Nov 26, 07:18 PM IST",
+  "updated_at": "Nov 26, 07:41 PM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -157,6 +157,14 @@
           "note": "Feeling completely exhausted. Zero pressure today. Post poetry, drop 1 tweet, and rest.",
           "status": "todo",
           "updated_at": "07:18 PM"
+        },
+        {
+          "title": "Morning Reminder: Find Free DTH / TV Setup",
+          "category": "Routine",
+          "priority": "low",
+          "note": "Reminder set for tomorrow morning to look into a free DTH box or setup for the old TV.",
+          "status": "todo",
+          "updated_at": "07:41 PM"
         }
       ],
       "notes": [
@@ -191,6 +199,10 @@
         {
           "time": "07:18 PM",
           "text": "Planned [Content \u00b7 Less Important]: Minimalist Plan: Instagram Poetry Post + 1 Tech Tweet & Sleep \u2014 Feeling completely exhausted. Zero pressure today. Post poetry, drop 1 tweet, and rest."
+        },
+        {
+          "time": "07:41 PM",
+          "text": "Planned [Routine \u00b7 Less Important]: Morning Reminder: Find Free DTH / TV Setup \u2014 Reminder set for tomorrow morning to look into a free DTH box or setup for the old TV."
         }
       ]
     }
