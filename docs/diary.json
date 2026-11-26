@@ -181,6 +181,14 @@
           "note": "Ready for tomorrow. Morning technical discipline.",
           "status": "todo",
           "updated_at": "08:08 PM"
+        },
+        {
+          "title": "Nov 27: 20+ Applications & Recruiter Check",
+          "category": "Jobs",
+          "priority": "high",
+          "note": "Full-stack & AI/ML role blitz.",
+          "status": "todo",
+          "updated_at": "08:08 PM"
         }
       ],
       "notes": [
@@ -231,6 +239,10 @@
         {
           "time": "08:08 PM",
           "text": "Planned [DSA \u00b7 Important]: Nov 27: Morning DSA Sprint (LeetCode + Codeforces + CodeChef) \u2014 Ready for tomorrow. Morning technical discipline."
+        },
+        {
+          "time": "08:08 PM",
+          "text": "Planned [Jobs \u00b7 Important]: Nov 27: 20+ Applications & Recruiter Check \u2014 Full-stack & AI/ML role blitz."
         }
       ]
     }
