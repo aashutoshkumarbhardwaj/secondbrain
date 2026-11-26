@@ -1,6 +1,6 @@
 {
   "latest_date": "2026-11-26",
-  "updated_at": "Nov 26, 03:43 AM IST",
+  "updated_at": "Nov 26, 04:36 AM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -101,11 +101,24 @@
       ]
     },
     "2026-11-26": {
-      "tasks": [],
+      "tasks": [
+        {
+          "title": "Nov 26: 1 LeetCode + 1 Codeforces + 1 CodeChef",
+          "category": "DSA",
+          "priority": "high",
+          "note": "Morning algorithmic sprint",
+          "status": "todo",
+          "updated_at": "04:36 AM"
+        }
+      ],
       "notes": [
         {
           "time": "03:43 AM",
           "text": "Journal Entry - Nov 25: Reflection on Healing, Recovery, and Mental Reset"
+        },
+        {
+          "time": "04:36 AM",
+          "text": "Planned [DSA \u00b7 Important]: Nov 26: 1 LeetCode + 1 Codeforces + 1 CodeChef \u2014 Morning algorithmic sprint"
         }
       ]
     }
