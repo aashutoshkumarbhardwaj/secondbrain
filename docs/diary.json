@@ -1,6 +1,6 @@
 {
   "latest_date": "2026-11-27",
-  "updated_at": "Nov 27, 03:21 PM IST",
+  "updated_at": "Nov 27, 05:35 PM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -340,9 +340,9 @@
           "title": "Nov 27: 9:30 PM Instagram Video Post",
           "category": "Content",
           "priority": "low",
-          "note": "Video scheduled for ~9:30 PM. Need to confirm which account: heyasu (poetry) or tech/jobs account.",
-          "status": "todo",
-          "updated_at": "03:21 PM"
+          "note": "Video posted on Inayatay Urdu Poetry page (Instagram) and also uploaded to YouTube.",
+          "status": "done",
+          "updated_at": "05:35 PM"
         }
       ],
       "notes": [
@@ -389,6 +389,10 @@
         {
           "time": "03:21 PM",
           "text": "Planned [Content \u00b7 Less Important]: Nov 27: 9:30 PM Instagram Video Post \u2014 Video scheduled for ~9:30 PM. Need to confirm which account: heyasu (poetry) or tech/jobs account."
+        },
+        {
+          "time": "05:35 PM",
+          "text": "Completed [Content]: Nov 27: 9:30 PM Instagram Video Post \u2014 Video posted on Inayatay Urdu Poetry page (Instagram) and also uploaded to YouTube."
         }
       ]
     }
