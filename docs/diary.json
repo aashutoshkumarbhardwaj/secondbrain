@@ -287,6 +287,14 @@
           "note": "Published video on personal HeyAsp Instagram account.",
           "status": "done",
           "updated_at": "01:21 PM"
+        },
+        {
+          "title": "Nov 27: Morning Reminder (Free DTH / TV Setup)",
+          "category": "Routine",
+          "priority": "low",
+          "note": "TV is running now. Setup complete.",
+          "status": "done",
+          "updated_at": "01:21 PM"
         }
       ],
       "notes": [
@@ -301,6 +309,10 @@
         {
           "time": "01:21 PM",
           "text": "Completed [Content]: Nov 27: Instagram Reels & Tech X/Twitter Posts \u2014 Published video on personal HeyAsp Instagram account."
+        },
+        {
+          "time": "01:21 PM",
+          "text": "Completed [Routine]: Nov 27: Morning Reminder (Free DTH / TV Setup) \u2014 TV is running now. Setup complete."
         }
       ]
     }
