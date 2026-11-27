@@ -1,6 +1,6 @@
 {
   "latest_date": "2026-11-27",
-  "updated_at": "Nov 27, 08:13 AM IST",
+  "updated_at": "Nov 27, 01:21 PM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -279,6 +279,14 @@
           "note": "Woke up, going for tea, then starting the day's tasks.",
           "status": "todo",
           "updated_at": "08:12 AM"
+        },
+        {
+          "title": "Nov 27: Instagram Reels & Tech X/Twitter Posts",
+          "category": "Content",
+          "priority": "low",
+          "note": "Published video on personal HeyAsp Instagram account.",
+          "status": "done",
+          "updated_at": "01:21 PM"
         }
       ],
       "notes": [
@@ -289,10 +297,14 @@
         {
           "time": "08:13 AM",
           "text": "Nov 27 Journal: Vulnerable Morning Check-in"
+        },
+        {
+          "time": "01:21 PM",
+          "text": "Completed [Content]: Nov 27: Instagram Reels & Tech X/Twitter Posts \u2014 Published video on personal HeyAsp Instagram account."
         }
       ]
     }
   },
-  "streak": 2,
-  "best_streak": 2
+  "streak": 3,
+  "best_streak": 3
 }
