@@ -1,6 +1,6 @@
 {
-  "latest_date": "2026-11-26",
-  "updated_at": "Nov 26, 08:08 PM IST",
+  "latest_date": "2026-11-27",
+  "updated_at": "Nov 27, 08:12 AM IST",
   "days": {
     "2026-11-25": {
       "tasks": [
@@ -267,6 +267,24 @@
         {
           "time": "08:08 PM",
           "text": "Planned [Routine \u00b7 Important]: Nov 27: Morning Reminder (Free DTH / TV Setup) \u2014 Check into finding a free DTH box or setup for the old TV."
+        }
+      ]
+    },
+    "2026-11-27": {
+      "tasks": [
+        {
+          "title": "Morning Check-in: Tea & Personal Time",
+          "category": "Routine",
+          "priority": "low",
+          "note": "Woke up, going for tea, then starting the day's tasks.",
+          "status": "todo",
+          "updated_at": "08:12 AM"
+        }
+      ],
+      "notes": [
+        {
+          "time": "08:12 AM",
+          "text": "Planned [Routine \u00b7 Less Important]: Morning Check-in: Tea & Personal Time \u2014 Woke up, going for tea, then starting the day's tasks."
         }
       ]
     }
