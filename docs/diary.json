@@ -319,6 +319,14 @@
           "note": "Enhanced core functionality, tested on 1-2 job applications, fixed minor bugs. Extension working end-to-end. Targeting publish in few days.",
           "status": "doing",
           "updated_at": "03:21 PM"
+        },
+        {
+          "title": "Nov 27: Apply to 1-2 Jobs Now",
+          "category": "Jobs",
+          "priority": "high",
+          "note": "Immediate application batch using new extension.",
+          "status": "todo",
+          "updated_at": "03:21 PM"
         }
       ],
       "notes": [
@@ -353,6 +361,10 @@
         {
           "time": "03:21 PM",
           "text": "Working on [Dev]: Nov 27: ATS Resume Optimizer Extension \u2014 Enhanced core functionality, tested on 1-2 job applications, fixed minor bugs. Extension working end-to-end. Targeting publish in few days."
+        },
+        {
+          "time": "03:21 PM",
+          "text": "Planned [Jobs \u00b7 Important]: Nov 27: Apply to 1-2 Jobs Now \u2014 Immediate application batch using new extension."
         }
       ]
     }
