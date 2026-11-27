@@ -1,0 +1,79 @@
+{
+  "identity": {
+    "name": "Aashutosh Kumar Bhardwaj",
+    "role": "Final-Year B.Tech Student (ABESIT Ghaziabad, AKTU)",
+    "target_roles": ["Full-Stack Engineer", "SDE", "AI/ML Engineer"],
+    "location": "Ghaziabad / Village (flexible)",
+    "availability": "Immediate / 2025 Graduate"
+  },
+  "links": {
+    "github": "https://github.com/aashutoshkumarbhardwaj",
+    "portfolio": "https://aashutoshkumarbhardwaj.xyz",
+    "huggingface": "https://huggingface.co/spaces/aashutoshkumarbhardwaj",
+    "linkedin": "https://linkedin.com/in/aashutoshkumarbhardwaj",
+    "twitter": "https://twitter.com/aashutoshkumarbhardwaj"
+  },
+  "tech_stack": {
+    "languages": ["Python", "JavaScript", "TypeScript", "SQL", "Bash"],
+    "backend": ["FastAPI", "Node.js", "Express", "LangChain", "FAISS", "Supabase", "PostgreSQL"],
+    "frontend": ["React", "Next.js", "Tailwind CSS", "HTML/CSS"],
+    "devops": ["Linux (Arch/Fedora/Debian)", "Docker", "Git", "GitHub Actions", "Hugging Face Spaces"],
+    "ai_ml": ["LangChain", "FAISS", "RAG", "OpenAI API", "Hugging Face Transformers", "Whisper"]
+  },
+  "projects": [
+    {
+      "name": "ATS Resume Optimizer Extension",
+      "status": "Enhanced, tested on 1-2 jobs, bugs fixed, publishing soon",
+      "tech": ["Chrome Extension", "FastAPI", "PDF Parsing", "Keyword Matching"],
+      "repo": "https://github.com/aashutoshkumarbhardwaj/ats-resume-optimizer"
+    },
+    {
+      "name": "Second Brain (Hermes + HF Space)",
+      "status": "Live, auto-sync, Whisper transcription, vector search",
+      "tech": ["Hermes Agent", "Gradio", "FastAPI", "GitHub Actions", "SQLite"],
+      "url": "https://aashutoshkumarbhardwaj.github.io/secondbrain/"
+    },
+    {
+      "name": "Content Pipeline (Dual Instagram + X/Twitter)",
+      "status": "Daily posts, Shayari + Tech, automated scripts",
+      "tech": ["Python", "Instagram Graph API", "Twitter API", "Hermes Skills"]
+    }
+  ],
+  "target_companies": [
+    "Google", "Microsoft", "Amazon", "Meta", "Netflix", "Uber", "Airbnb",
+    "Swiggy", "Zomato", "Razorpay", "PhonePe", "CRED", "Meesho",
+    "OpenAI", "Anthropic", "Hugging Face", "Weights & Biases",
+    "Startups (Series A+): 50+ identified via job boards"
+  ],
+  "courses_papers": {
+    "active_learning": [
+      "CS231n (CNN for Visual Recognition)",
+      "CS224n (NLP with Deep Learning)",
+      "Fast.ai Practical Deep Learning",
+      "LangChain & Vector Databases in Production"
+    ],
+    "parking_lot": [
+      "Rust for Systems Programming",
+      "LLM Fine-tuning (QLoRA/PEFT)",
+      "Kubernetes & Distributed Systems",
+      "Compiler Design (LLVM)",
+      "Advanced Algorithms (MIT 6.046)"
+    ]
+  },
+  "current_goals": {
+    "primary": "Land Full-Stack / AI-ML role (20+ applications/day)",
+    "secondary": [
+      "DSA mastery: LeetCode 300+, Codeforces 1600+",
+      "Publish ATS Resume Optimizer Extension",
+      "Scale content: 10k+ followers across platforms",
+      "Physique: Consistent strength + grooming routine"
+    ]
+  },
+  "lanes": {
+    "build": "ATS Resume Optimizer Extension + Job Applications",
+    "reading": "1 Chapter/Paper per week (CS224n, LangChain in Production)",
+    "open": "Video Clipping Tool Setup + Content Automation",
+    "parking_lot": ["Rust", "LLM Fine-tuning", "Kubernetes", "Compiler Design", "Advanced Algorithms"]
+  },
+  "spine": "Shipping production-grade AI/Full-Stack products that solve real hiring problems — code builds it, design makes it usable, psychology understands users, writing markets it, video gets it seen."
+}
