@@ -343,6 +343,14 @@
           "note": "Video posted on Inayatay Urdu Poetry page (Instagram) and also uploaded to YouTube.",
           "status": "done",
           "updated_at": "05:35 PM"
+        },
+        {
+          "title": "Nov 27: Evening Wind-Down",
+          "category": "Routine",
+          "priority": "high",
+          "note": "Post-sleep tasks: Minoxidil, skincare, review tomorrow's plan, 8-hour sleep buffer by 11:30 PM.",
+          "status": "todo",
+          "updated_at": "05:35 PM"
         }
       ],
       "notes": [
@@ -393,6 +401,10 @@
         {
           "time": "05:35 PM",
           "text": "Completed [Content]: Nov 27: 9:30 PM Instagram Video Post \u2014 Video posted on Inayatay Urdu Poetry page (Instagram) and also uploaded to YouTube."
+        },
+        {
+          "time": "05:35 PM",
+          "text": "Planned [Routine \u00b7 Important]: Nov 27: Evening Wind-Down \u2014 Post-sleep tasks: Minoxidil, skincare, review tomorrow's plan, 8-hour sleep buffer by 11:30 PM."
         }
       ]
     }
