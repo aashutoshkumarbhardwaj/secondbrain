@@ -335,6 +335,14 @@
           "note": "Install and configure clipping workflow for content pipeline.",
           "status": "todo",
           "updated_at": "03:21 PM"
+        },
+        {
+          "title": "Nov 27: 9:30 PM Instagram Video Post",
+          "category": "Content",
+          "priority": "low",
+          "note": "Video scheduled for ~9:30 PM. Need to confirm which account: heyasu (poetry) or tech/jobs account.",
+          "status": "todo",
+          "updated_at": "03:21 PM"
         }
       ],
       "notes": [
@@ -377,6 +385,10 @@
         {
           "time": "03:21 PM",
           "text": "Planned [Dev \u00b7 Important]: Nov 27: Set Up Video Clipping Tool on Personal Laptop \u2014 Install and configure clipping workflow for content pipeline."
+        },
+        {
+          "time": "03:21 PM",
+          "text": "Planned [Content \u00b7 Less Important]: Nov 27: 9:30 PM Instagram Video Post \u2014 Video scheduled for ~9:30 PM. Need to confirm which account: heyasu (poetry) or tech/jobs account."
         }
       ]
     }
