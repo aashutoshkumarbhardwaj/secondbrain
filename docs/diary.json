@@ -303,6 +303,14 @@
           "note": "Worked on core project - progress made.",
           "status": "doing",
           "updated_at": "01:21 PM"
+        },
+        {
+          "title": "Nov 27: DSA Sprint Remaining (LeetCode + Codeforces + CodeChef)",
+          "category": "DSA",
+          "priority": "high",
+          "note": "Pending - to complete now.",
+          "status": "todo",
+          "updated_at": "01:21 PM"
         }
       ],
       "notes": [
@@ -325,6 +333,10 @@
         {
           "time": "01:21 PM",
           "text": "Working on [Dev]: Nov 27: Project Work Session \u2014 Worked on core project - progress made."
+        },
+        {
+          "time": "01:21 PM",
+          "text": "Planned [DSA \u00b7 Important]: Nov 27: DSA Sprint Remaining (LeetCode + Codeforces + CodeChef) \u2014 Pending - to complete now."
         }
       ]
     }
