@@ -327,6 +327,14 @@
           "note": "Immediate application batch using new extension.",
           "status": "todo",
           "updated_at": "03:21 PM"
+        },
+        {
+          "title": "Nov 27: Set Up Video Clipping Tool on Personal Laptop",
+          "category": "Dev",
+          "priority": "high",
+          "note": "Install and configure clipping workflow for content pipeline.",
+          "status": "todo",
+          "updated_at": "03:21 PM"
         }
       ],
       "notes": [
@@ -365,6 +373,10 @@
         {
           "time": "03:21 PM",
           "text": "Planned [Jobs \u00b7 Important]: Nov 27: Apply to 1-2 Jobs Now \u2014 Immediate application batch using new extension."
+        },
+        {
+          "time": "03:21 PM",
+          "text": "Planned [Dev \u00b7 Important]: Nov 27: Set Up Video Clipping Tool on Personal Laptop \u2014 Install and configure clipping workflow for content pipeline."
         }
       ]
     }
