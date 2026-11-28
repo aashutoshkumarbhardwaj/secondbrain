@@ -5,6 +5,7 @@ tags: [reading, atomic, spine]
 
 # ⟡ Reading: {{SOURCE_TITLE}}
 > **Author:** {{AUTHOR}} • **Type:** {{TYPE}} • **Date:** {{DATE}} • **Spine:** [[Spine#{{SPINE_THEME}}|{{SPINE_THEME}}]]
+> <span class="data-flow-indicator">🔄 Connected to Spine</span>
 
 ---
 
@@ -70,4 +71,4 @@ tags: [reading, atomic, spine]
 
 ---
 
-*Reading template v1.0 • Atomic notes > summaries. Connect everything to Spine.*
+*Reading template v2.0 • Atomic notes > summaries. Connect everything to Spine.*

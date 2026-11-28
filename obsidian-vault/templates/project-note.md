@@ -5,6 +5,7 @@ tags: [project, build-lane]
 
 # ⟡ Project: {{PROJECT_NAME}}
 > **Status:** `{{STATUS}}` • **Lane:** `{{LANE}}` • **Started:** {{DATE}} • **Target:** {{TARGET_DATE}}
+> <span class="data-flow-indicator">🔄 TickTick ←→ Obsidian ←→ GitHub</span>
 
 ---
 
@@ -82,4 +83,4 @@ LIMIT 10
 
 ---
 
-*Project template v1.0 • Keep it lean. Update the Build Log every session.*
+*Project template v2.0 • Beautiful, connected, alive. Update the Build Log every session.*

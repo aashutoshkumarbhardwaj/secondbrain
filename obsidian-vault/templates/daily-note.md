@@ -5,6 +5,7 @@ tags: [daily, journal, micro-tasks]
 
 # ⟡ Daily Note — {{DATE}}
 > **{{DAY}}** • Week **{{WEEK}}** • {{TIME_12H}}
+> <span class="date-badge">📅 {{DATE}}</span>
 
 ---
 
@@ -19,35 +20,37 @@ tags: [daily, journal, micro-tasks]
 >>     E --> F[🏗️ Build Lane #1<br/>90 min]
 >>     F --> G[🏗️ Build Lane #2<br/>90 min]
 >>     G --> H[📤 Push → TickTick<br/>python ticktick_sync.py push]
+>>     style A fill:#1a1d24,stroke:#7c9cf0,stroke-width:2px
+>>     style H fill:#4ade8022,stroke:#4ade80,stroke-width:2px
 >> ```
 >>
 >> **Micro-Tasks (Priority Order):**
->> - [ ] **DSA Triad** — 1 LeetCode + 1 Codeforces + 1 CodeChef
->> - [ ] **Build Lane #1** — {{BUILD_TASK_1}}
->> - [ ] **Build Lane #2** — {{BUILD_TASK_2}}
->> - [ ] **20+ Job Applications** — Full-Stack / SDE / AI-ML
->> - [ ] **Content** — Reel + 3 Tweets + Poetry
->> - [ ] **Health** — Workout + Minoxidil + Skincare
->> - [ ] **Reading** — 3 bullets to Spine
+>> <span class="priority-dot" style="background: #f87171;"></span> **DSA Triad** — 1 LeetCode + 1 Codeforces + 1 CodeChef
+>> <span class="priority-dot" style="background: #7c9cf0;"></span> **Build Lane #1** — {{BUILD_TASK_1}}
+>> <span class="priority-dot" style="background: #4ade80;"></span> **Build Lane #2** — {{BUILD_TASK_2}}
+>> <span class="priority-dot" style="background: #fbbf24;"></span> **20+ Job Applications** — Full-Stack / SDE / AI-ML
+>> <span class="priority-dot" style="background: #a855f7;"></span> **Content** — Reel + 3 Tweets + Poetry
+>> <span class="priority-dot" style="background: #ec4899;"></span> **Health** — Workout + Minoxidil + Skincare
+>> <span class="priority-dot" style="background: #06b6d4;"></span> **Reading** — 3 bullets to Spine
 
 ---
 
 > [!multi-column] **🧠 DSA TRIAD**
->> [!tip]+ **LeetCode**
+>> [!tip]+ **LeetCode** <span class="data-flow-indicator">🔄 TickTick</span>
 >> - Problem: `{{LC_PROBLEM}}`
 >> - Link: `{{LC_LINK}}`
 >> - Status: `{{LC_STATUS}}`
 >> - Time: `{{LC_TIME}}`
 >> - Pattern: `{{LC_PATTERN}}`
 >>
->> [!example]+ **Codeforces**
+>> [!example]+ **Codeforces** <span class="data-flow-indicator">🔄 TickTick</span>
 >> - Problem: `{{CF_PROBLEM}}`
 >> - Link: `{{CF_LINK}}`
 >> - Status: `{{CF_STATUS}}`
 >> - Time: `{{CF_TIME}}`
 >> - Rating: `{{CF_RATING}}`
 >>
->> [!success]+ **CodeChef**
+>> [!success]+ **CodeChef** <span class="data-flow-indicator">🔄 TickTick</span>
 >> - Problem: `{{CC_PROBLEM}}`
 >> - Link: `{{CC_LINK}}`
 >> - Status: `{{CC_STATUS}}`
@@ -57,7 +60,7 @@ tags: [daily, journal, micro-tasks]
 ---
 
 > [!multi-column] **🏗️ BUILD LANES — 90 MIN EACH**
->> [!abstract]+ **Lane 1: {{BUILD_TASK_1}}**
+>> [!abstract]+ **Lane 1: {{BUILD_TASK_1}}** <span class="data-flow-indicator">🔄 TickTick</span>
 >> - **Goal:** `{{LANE1_GOAL}}`
 >> - **Stack:** `{{LANE1_STACK}}`
 >> - **Blocker:** `{{LANE1_BLOCKER}}`
@@ -68,7 +71,7 @@ tags: [daily, journal, micro-tasks]
 >>   - [ ] Polish / Docs
 >> - **Commit:** `{{LANE1_COMMIT}}`
 >>
->> [!tip]+ **Lane 2: {{BUILD_TASK_2}}**
+>> [!tip]+ **Lane 2: {{BUILD_TASK_2}}** <span class="data-flow-indicator">🔄 TickTick</span>
 >> - **Goal:** `{{LANE2_GOAL}}`
 >> - **Stack:** `{{LANE2_STACK}}`
 >> - **Blocker:** `{{LANE2_BLOCKER}}`
@@ -81,7 +84,7 @@ tags: [daily, journal, micro-tasks]
 
 ---
 
-> [!multi-column] **📚 READING LANE — ATOMIC NOTES**
+> [!multi-column] **📚 READING LANE — ATOMIC NOTES** <span class="data-flow-indicator">🔄 TickTick</span>
 >> [!example]+ **Input**
 >> - **Source:** `{{READING_SOURCE}}`
 >> - **Type:** `{{READING_TYPE}}` (Paper / Article / Video / Book)
@@ -160,7 +163,7 @@ tags: [daily, journal, micro-tasks]
 
 ---
 
-> [!tip]+ **🔗 QUICK LINKS**
+> [!tip]+ **🔗 QUICK LINKS** <span class="data-flow-indicator">🔄 Connected</span>
 >> - [[Home|🏠 Command Center]]
 >> - [[templates/daily-note.md|📋 This Template]]
 >> - [[templates/project-note.md|🏗️ Project Template]]
