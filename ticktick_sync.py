@@ -90,17 +90,35 @@ def get_today_daily_path():
     return DAILY_DIR / f"{today}.md"
 
 def parse_microtasks_from_daily(daily_path):
-    """Extract [ ] micro-tasks from today's daily note"""
+    """Extract [ ] micro-tasks from today's daily note - ONLY from the main Micro-Tasks section"""
     if not daily_path.exists():
         return []
     content = daily_path.read_text(encoding="utf-8")
     # Match lines with [ ] or [x] followed by task text
+    # ONLY from the main "Micro-Tasks (Priority Order):" section, not nested callouts
     tasks = []
+    in_microtasks_section = False
     for line in content.split("\n"):
-        match = re.match(r"^\s*[-*]\s+\[([ x])\]\s+(.+)$", line)
+        # Detect the start of the micro-tasks section
+        if "Micro-Tasks (Priority Order)" in line:
+            in_microtasks_section = True
+            continue
+        # Stop at next major section (starts with > [! or ## or ---)
+        if in_microtasks_section and (line.startswith("> [") or line.startswith("##") or line.startswith("---")):
+            in_microtasks_section = False
+            continue
+        if not in_microtasks_section:
+            continue
+        # Strip callout prefixes like ">> " or "> "
+        clean_line = re.sub(r"^(\s*>+\s*)+", "", line)
+        match = re.match(r"^\s*[-*]\s+\[([ x])\]\s+(.+)$", clean_line)
         if match:
             status, text = match.groups()
-            tasks.append({"text": text.strip(), "done": status == "x", "raw_line": line.strip()})
+            # Clean up the text: remove markdown bold, em dash descriptions
+            clean_text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)  # Remove **bold**
+            clean_text = re.sub(r"\s*[—-]\s*.+$", "", clean_text)  # Remove — description
+            clean_text = clean_text.strip()
+            tasks.append({"text": clean_text, "done": status == "x", "raw_line": line.strip()})
     return tasks
 
 def update_daily_checkbox(daily_path, task_text, done=True):
