@@ -1,0 +1,21 @@
+{
+  "editor:toggle-bold": ["Mod+b"],
+  "editor:toggle-italic": ["Mod+i"],
+  "editor:toggle-code": ["Mod+`"],
+  "editor:toggle-strikethrough": ["Mod+Shift+s"],
+  "editor:toggle-checklist": ["Mod+Shift+l"],
+  "editor:insert-link": ["Mod+k"],
+  "templates:insert-template": ["Mod+Alt+t"],
+  "daily-notes:open-today": ["Mod+Shift+d"],
+  "daily-notes:open-next": ["Mod+Shift+Right"],
+  "daily-notes:open-prev": ["Mod+Shift+Left"],
+  "quick-switcher:open": ["Mod+o"],
+  "command-palette:open": ["Mod+Shift+p"],
+  "graph:open": ["Mod+g"],
+  "file-explorer:focus": ["Mod+Shift+e"],
+  "search:open": ["Mod+Shift+f"],
+  "app:toggle-left-sidebar": ["Mod+,"],
+  "app:toggle-right-sidebar": ["Mod+."],
+  "workspace:toggle-left-split": ["Mod+Shift+["],
+  "workspace:toggle-right-split": ["Mod+Shift+]"]
+}

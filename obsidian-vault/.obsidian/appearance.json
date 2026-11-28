@@ -1,0 +1,32 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "assets",
+  "defaultViewMode": "preview",
+  "enableTabGroups": true,
+  "fileSortOrder": "byModifiedTimeDesc",
+  "foldHeading": true,
+  "foldIndent": true,
+  "newFileLocation": "folder",
+  "newFolderLocation": "current",
+  "promptDelete": false,
+  "readableLineLength": true,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "spellcheckLanguages": ["en-US"],
+  "tabSize": 2,
+  "useMarkdownLinks": true,
+  "vimMode": false,
+  "mobileToolbarCommands": [
+    "editor:toggle-bold",
+    "editor:toggle-italic",
+    "editor:toggle-code",
+    "editor:toggle-strikethrough",
+    "editor:insert-link",
+    "editor:toggle-highlight",
+    "editor:toggle-checklist"
+  ],
+  "cssSnippets": ["clean-ui"],
+  "theme": "obsidian",
+  "theme-dark": "obsidian",
+  "theme-light": "obsidian"
+}
